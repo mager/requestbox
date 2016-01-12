@@ -18,8 +18,10 @@ app.route('/')
     res.render('pages/index');
   })
   .post(function(req, res) {
-    console.log(req);
-    res.send('Success');
+    r = req.headers;
+
+    console.log(r);
+    res.json(r);
   });
 
 app.listen(app.get('port'), function() {
