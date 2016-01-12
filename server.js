@@ -13,14 +13,14 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', function(request, response) {
-  response.render('pages/index');
-});
-
-app.post('/webhook', function(request, response) {
-  console.log(request);
-  response.send('Success');
-});
+app.route('/')
+  .get(function(req, res) {
+    response.render('pages/index');
+  })
+  .post(function(req, res) {
+    console.log(request);
+    response.send('Success');
+  });
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
