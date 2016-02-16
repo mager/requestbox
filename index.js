@@ -18,9 +18,8 @@ app.route('/')
     res.render('pages/index');
   })
   .post(function(req, res) {
-    r = req.headers;
-
-    console.log(r);
+    r = req.headers['x-postmates-signature'];
+    console.log('Signature: ' + r);
     res.json(r);
   });
 
