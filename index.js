@@ -19,10 +19,8 @@ app.route('/')
   })
   .post(function(req, res) {
     h = req.headers;
-    b = req.body;
     console.log('Headers: ' + r);
-    console.log('Body: ' + b);
-    res.json('Success');
+    res.json(h);
   });
 
 app.listen(app.get('port'), function() {
