@@ -18,9 +18,11 @@ app.route('/')
     res.render('pages/index');
   })
   .post(function(req, res) {
-    r = req.headers['x-postmates-signature'];
-    console.log('Signature: ' + r);
-    res.json(r);
+    h = req.headers;
+    b = req.body;
+    console.log('Headers: ' + r);
+    console.log('Body: ' + b);
+    res.json('Success');
   });
 
 app.listen(app.get('port'), function() {
