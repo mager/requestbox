@@ -19,7 +19,7 @@ app.route('/')
   })
   .post(function(req, res) {
     r = req.headers;
-    console.log(r);
+    console.log(r['x-postmates-signature']);
     res.json(r);
   });
 
