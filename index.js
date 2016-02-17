@@ -19,7 +19,7 @@ app.route('/')
   })
   .post(function(req, res) {
     r = req.headers;
-    console.log('Headers: ' + r);
+    console.log(r);
     res.json(r);
   });
 
