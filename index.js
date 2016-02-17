@@ -18,9 +18,9 @@ app.route('/')
     res.render('pages/index');
   })
   .post(function(req, res) {
-    h = req.headers;
+    r = req.headers;
     console.log('Headers: ' + r);
-    res.json(h);
+    res.json(r);
   });
 
 app.listen(app.get('port'), function() {
