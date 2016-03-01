@@ -18,8 +18,8 @@ app.route('/')
     res.render('pages/index');
   })
   .post(function(req, res) {
-    r = req.body.data.courier;
-    console.log(r);
+    r = req.body.data.courier.name;
+    console.log('Courier name: ' + r);
     res.json(r);
   });
 
