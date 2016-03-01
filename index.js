@@ -18,8 +18,8 @@ app.route('/')
     res.render('pages/index');
   })
   .post(function(req, res) {
-    r = req.headers;
-    console.log(r['x-postmates-signature']);
+    r = req.body.data.courier;
+    console.log(r);
     res.json(r);
   });
 
