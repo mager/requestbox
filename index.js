@@ -19,7 +19,7 @@ app.route('/')
   })
   .post(function(req, res) {
     r = req.body;
-    console.log('\n\n' + r + '\n\n');
+    console.log('\n\n' + JSON.stringify(r) + '\n\n');
     res.json(r);
   });
 
