@@ -18,8 +18,8 @@ app.route('/')
     res.render('pages/index');
   })
   .post(function(req, res) {
-    r = req.body.data['status'];
-    console.log(r);
+    r = req.body;
+    console.log('\n\n' + r + '\n\n');
     res.json(r);
   });
 
