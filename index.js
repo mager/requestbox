@@ -18,7 +18,7 @@ app.route('/')
     res.render('pages/index');
   })
   .post(function(req, res) {
-    r = req.headers;
+    r = req.body.data['status'];
     console.log(r);
     res.json(r);
   });
