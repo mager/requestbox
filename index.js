@@ -9,14 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.static(__dirname + '/public'));
 
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
 app.route('/')
-  .get(function(req, res) {
-    res.render('pages/index');
-  })
   .post(function(req, res) {
     r = req.body;
     console.log('\n\n' + JSON.stringify(r) + '\n\n');
